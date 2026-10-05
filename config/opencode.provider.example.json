@@ -1,0 +1,69 @@
+{
+  "homelab": {
+    "name": "Homelab (mini)",
+    "package": "@opencode/ai/providers/openai-compatible",
+    "settings": {
+      "baseURL": "http://<хост-шлюза>:8130/v1",
+      "apiKey": "<AI_GATEWAY_TOKEN из ~/.config/ai-gateway/env>"
+    },
+    "models": {
+      "claude-opus-5-5": {
+        "name": "Claude Opus 5.5 (subscription)",
+        "capabilities": {
+          "tools": true,
+          "input": ["text", "image", "file"],
+          "output": ["text"]
+        },
+        "compatibility": {
+          "reasoningField": "reasoning_content"
+        },
+        "variants": [
+          { "id": "none", "body": { "thinking": { "type": "disabled" } } },
+          { "id": "low", "settings": { "reasoningEffort": "low" } },
+          { "id": "medium", "settings": { "reasoningEffort": "medium" } },
+          { "id": "high", "settings": { "reasoningEffort": "high" } },
+          { "id": "xhigh", "settings": { "reasoningEffort": "xhigh" } },
+          { "id": "max", "settings": { "reasoningEffort": "max" } }
+        ]
+      },
+      "claude-sonnet-5-5": {
+        "name": "Claude Sonnet 5.5 (subscription)",
+        "capabilities": {
+          "tools": true,
+          "input": ["text", "image", "file"],
+          "output": ["text"]
+        },
+        "compatibility": {
+          "reasoningField": "reasoning_content"
+        },
+        "variants": [
+          { "id": "none", "body": { "thinking": { "type": "disabled" } } },
+          { "id": "low", "settings": { "reasoningEffort": "low" } },
+          { "id": "medium", "settings": { "reasoningEffort": "medium" } },
+          { "id": "high", "settings": { "reasoningEffort": "high" } },
+          { "id": "xhigh", "settings": { "reasoningEffort": "xhigh" } },
+          { "id": "max", "settings": { "reasoningEffort": "max" } }
+        ]
+      },
+      "claude-haiku-4-5": {
+        "name": "Claude Haiku 4.5 (subscription)",
+        "capabilities": {
+          "tools": true,
+          "input": ["text", "image", "file"],
+          "output": ["text"]
+        },
+        "compatibility": {
+          "reasoningField": "reasoning_content"
+        },
+        "variants": [
+          { "id": "none", "body": { "thinking": { "type": "disabled" } } },
+          { "id": "low", "settings": { "reasoningEffort": "low" } },
+          { "id": "medium", "settings": { "reasoningEffort": "medium" } },
+          { "id": "high", "settings": { "reasoningEffort": "high" } },
+          { "id": "xhigh", "settings": { "reasoningEffort": "xhigh" } },
+          { "id": "max", "settings": { "reasoningEffort": "max" } }
+        ]
+      }
+    }
+  }
+}

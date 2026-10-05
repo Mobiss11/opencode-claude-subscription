@@ -1,0 +1,37 @@
+{
+  "listen": {
+    "host": "0.0.0.0",
+    "port": 8130
+  },
+  "auth": {
+    "token": null,
+    "token_env": "AI_GATEWAY_TOKEN"
+  },
+  "request_timeout_seconds": 300,
+  "upstreams": {
+    "kraube": {
+      "base_url": "http://127.0.0.1:8787",
+      "api_key_env": "KRAUBE_SERVE_KEY",
+      "api_format": "anthropic",
+      "move_env_to_user": true,
+      "headers": {}
+    }
+  },
+  "models": {
+    "claude-opus-5-5": {
+      "upstream": "kraube",
+      "model": "claude-opus-5-5",
+      "name": "Claude Opus 5.5 (subscription)"
+    },
+    "claude-sonnet-5-5": {
+      "upstream": "kraube",
+      "model": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5 (subscription)"
+    },
+    "claude-haiku-4-5": {
+      "upstream": "kraube",
+      "model": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5 (subscription)"
+    }
+  }
+}
